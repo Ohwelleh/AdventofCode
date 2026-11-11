@@ -4,11 +4,12 @@ def main():
 
     # answerP1 = solve1(rawData)
 
-    answerP2 = solve2(rawData)
+    answerP21, answerP22 = solve2(rawData)
     
 
 
-    print(answerP2)
+    print(answerP21)
+    print(answerP22)
 
 
 
@@ -17,37 +18,36 @@ def solve2(data):
     maxVal = 99
     minVal = 0
     counter = 0
+    password = 0
 
     for val in data:
         
-        counterNotZero = (counter != 0)
+
         direction = val[0]
         directionVal = int(val[1:])
 
         if direction == "R":
             while directionVal > 0:
+                if currentPosition == 0:
+                    counter += 1
                 currentPosition += 1
                 directionVal -= 1
                 if currentPosition > maxVal:
                     currentPosition = 0
-
-                    if directionVal > 1 and counterNotZero:
-                        counter += 1
         else:
             while directionVal > 0:
+                if currentPosition == 0:
+                    counter += 1
                 currentPosition -= 1
                 directionVal -= 1
                 if currentPosition < minVal:
                     currentPosition = 99
 
-                    if directionVal > 1 and counterNotZero:
-                        counter += 1
-
         if currentPosition == 0:
-            counter += 1
+            password += 1
 
     
-    return counter
+    return password, counter
 
 
 
