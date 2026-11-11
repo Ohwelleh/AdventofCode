@@ -3,6 +3,12 @@ def main():
 
     answerP1 = solve(rawData)
 
+    print(answerP1)
+
+
+def solve(data):
+    return 1
+
 
 def loadData(data: str) -> list[str]:
     with open(data, 'r') as f:
@@ -13,8 +19,6 @@ def loadData(data: str) -> list[str]:
 
     return rawData
 
-def solve(data):
-    pass
 
 
 if __name__ == "__main__":
