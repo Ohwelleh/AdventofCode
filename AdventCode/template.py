@@ -1,12 +1,17 @@
 def main():
     rawData = loadData('sample.txt')
 
-    answerP1 = solve(rawData)
+    answerP1 = solve1(rawData)
+    answerP2 = solve2(rawData)
 
     print(answerP1)
 
 
-def solve(data):
+def solve2(data):
+    return 2
+
+
+def solve1(data):
     return 1
 
 

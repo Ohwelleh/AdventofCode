@@ -9,7 +9,7 @@ def main():
 
 
     print(answerP21)
-    print(answerP22)
+    print(answerP21)
 
 
 
